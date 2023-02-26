@@ -100,6 +100,7 @@ const  reverseString  = (string) => {<br>
 
 
 if(show_revers) {
+  reverse.style = "height : 50rem"
   reverse.appendChild(reverse_code)
   show_revers = false
 }

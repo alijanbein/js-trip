@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="index.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="index.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-<script src="./src/index.js"></script>
-</body>
-    
+  </head>
+  <body>
+    <div class="main" id = "main">
+        <h1>contact info</h1>
+      <form>
+        <div class="input">
+          <label for="name">FName :</label>
+          <input id="fname" placeholder="Enter your fname ... " type="text" />
+        </div>
+        <div class="input">
+          <label for="name">LName :</label>
+          <input id="lname" placeholder="Enter your lname" type="text" />
+        </div>
+        <div class="input">
+            <label for="name">Phone :</label>
+            <input id="phone" placeholder="Enter your phone number" type="text" />
+          </div>
+        <div  id = "gm" class="input">
+          <label for="name">Email :</label>
+          <input  id="email" placeholder="Enter your email" type="text" />
+        </div>
+        <div id = "pas" class="input ">
+          <label for="name">Password :</label>
+          <input  id = "password" placeholder="Enter your passord" type="password" />
+        </div>
+    </form>
+    <button onclick="submitHandler()">Register</button>
+
+    </div>
+    <script src="./src/form.js"></script>
+  </body>
 </html>

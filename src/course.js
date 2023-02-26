@@ -39,6 +39,7 @@ if(show_palindrome) {
 
 to_prime_code.addEventListener("click", () => {
   const prime = document.getElementById("prime")
+  prime.classList.add("animation")
 prime_code.innerHTML = `
 
 const  isPrime = (age) => {<br>

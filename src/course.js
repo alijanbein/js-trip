@@ -28,10 +28,12 @@ const palidrom = (string) => {<br>
       return false\n
   }
 `;
+palidrom_code.className = "animation"
 
 
 if(show_palindrome) {
   palindrom.appendChild(palidrom_code)
+  palidrom.classList.add("an2")
   show_palindrome = false
 }
 

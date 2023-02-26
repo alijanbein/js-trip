@@ -8,13 +8,13 @@ class Form {
     }
 
      asObject() {
-        return {
+        return JSON.stringify( {
             fname: this.fname,
             lname: this.lname,
             phone: this.phone,
             email: this.email,
             password : this.password
-        }
+        })
     }
 }
 

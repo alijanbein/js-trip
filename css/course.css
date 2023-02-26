@@ -94,10 +94,15 @@ body {
 }
 
 .animation {
-   transition: max-height 0.6s linear;
-    
-}
+    max-height: 20rem;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;}
 
+.an2 {
+    max-height: 50rem !important;
+    transition: max-height 0.25s ease-in;
+
+}
 .location {
     color: #fff;
 }

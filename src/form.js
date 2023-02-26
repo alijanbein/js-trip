@@ -19,6 +19,7 @@ class Form {
 }
 
 const submitHandler = (event) => {
+    window.location.href = "./course.html";
     const fname = document.getElementById("fname").value
     const lname = document.getElementById("lname").value
     const phone = document.getElementById("phone").value
@@ -26,8 +27,6 @@ const submitHandler = (event) => {
     const password = document.getElementById("password").value
     const form = new Form(fname, lname, phone, email, password)
     console.log(form.asObject());
-    const main = document.getElementById("main")
-    main.remove()
 
     const pas = document.getElementById("pas")
     const gm = document.getElementById("gm")
@@ -44,7 +43,7 @@ const submitHandler = (event) => {
     if (passwordIsValid && emailIsValid) {
         pas.classList.remove("error")
         gm.classList.remove("error")
-        main.remove()
+        
     }
 
 }

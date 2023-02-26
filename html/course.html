@@ -46,26 +46,25 @@
         </p>
         <div class="test">
           <input id="prime-input" type="text" />
-          <button>run</button>
+          <button onclick="primeAnswer()">run</button>
           <div class="output">
-            <p>your output is :</p>
+            <p id="prime-answer">your output is :</p>
             <img id="to_prime_code" src="../assets/code-removebg-preview.png" />
           </div>
         </div>
       </div>
       <div id="reverse" class="part animation">
         <p>
-          What is palindrome with example? Image result for what is palindrome A
-          palindrome is a word, number, phrase, or other sequence of symbols
-          that reads the same backwards as forwards, such as the words madam or
-          racecar and the sentence: "A man, a plan, a canal – Panama". input a
-          String to show if it is a palindrom or not
+          reverse a string by reversing all the number in it without affecting
+          all the other charachters in it like :<br />
+          input : a1linj2<br />
+          output: a2linj1
         </p>
         <div class="test">
           <input id="rev-input" type="text" />
-          <button>run</button>
+          <button onclick="reverseAnswer()">run</button>
           <div class="output">
-            <p>your output is :</p>
+            <p id="rev-answer">your output is :</p>
             <img
               id="to_reverse_code"
               src="../assets/code-removebg-preview.png"
@@ -75,22 +74,22 @@
       </div>
       <div id="yay" class="part animation">
         <p>
-          What is palindrome with example? Image result for what is palindrome A
-          palindrome is a word, number, phrase, or other sequence of symbols
-          that reads the same backwards as forwards, such as the words madam or
-          racecar and the sentence: "A man, a plan, a canal – Panama". input a
-          String to show if it is a palindrom or not
+          move the first set of consonants (one or more) to the end of the word.
+          Second, add “ay” to the end of the word. For example, the word
+          “banana” would become “ananabay.”
         </p>
         <div class="test">
           <input id="yay-input" type="text" />
-          <button>run</button>
+          <button onclick="yayAnswer()">run</button>
           <div class="output">
-            <p>your output is :</p>
+            <p id="yay-answer">your output is :</p>
             <img id="to_yay_code" src="../assets/code-removebg-preview.png" />
           </div>
         </div>
       </div>
     </section>
+    <section id="location"></section>
+    <button class="boost">Boost me up</button>
     <script src="../src/course.js"></script>
   </body>
 </html>

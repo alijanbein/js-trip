@@ -13,7 +13,9 @@ const prime_code = document.createElement("p")
 const reverse_code = document.createElement("p")
 const yay_code = document.createElement("p")
 
-
+const course = document.getElementById("courses").addEventListener("scroll", ()=>{
+  console.log("alert");
+})
 
 to_palindrom_code.addEventListener("click", () => {
   const palindrom = document.getElementById("palindrom")
@@ -194,78 +196,111 @@ const  isPrime = (age) => {
     return true;
   }
 
+  const primeAnswer = () => {
+    const primeInput = document.getElementById("prime-input").value;
+    const prime = document.getElementById("prime-answer");
+    const answer = isPrime(primeInput)
+    prime.innerHTML = "your output is :" + answer;  
+  }
+
 // console.log(isPrime(13));
 
-// function reverse(str) {
+function reverse(str) {
 
-//     let newString = [];
-//     for (let i = str.length - 1; i >= 0; i--) {
-//         newString.push(str[i]);
-//     }
-//     return newString;
-// }
-// const  reverseString  = (string) => {
-//     const special = {}
-//     const numbers = []
-//     for (let i = 0 ; i < string.length; i++){
-//         if (string[i].match(/[0-9]/i)) numbers.push(string[i])
-//         else special[i] = string[i]
-//     }
-//     const reversed = reverse(numbers)
-//     for (key in special){
-//         console.log(key,special[key]);
-//         reversed.splice(key,0,special[key])
-//     }
-//     const join = reversed.join("")
-//     return join.toString();
-// }
+    let newString = [];
+    for (let i = str.length - 1; i >= 0; i--) {
+        newString.push(str[i]);
+    }
+    return newString;
+}
+const  reverseString  = (string) => {
+    const special = {}
+    const numbers = []
+    for (let i = 0 ; i < string.length; i++){
+        if (string[i].match(/[0-9]/i)) numbers.push(string[i])
+        else special[i] = string[i]
+    }
+    const reversed = reverse(numbers)
+    for (key in special){
+        console.log(key,special[key]);
+        reversed.splice(key,0,special[key])
+    }
+    const join = reversed.join("")
+    return join.toString();
+}
 
-// console.log(reverseString("alin31ed"));
+const reverseAnswer = () => {
+    const revInput = document.getElementById("rev-input").value;
+    const revOutput = document.getElementById("rev-answer");
+    const answer = reverseString(revInput);
+    revOutput.innerHTML = "your output is :" + answer
 
-// function consonant(string) {
-//   let con = string.match(/^([^aeiou]+)[aeiou]/i);
-//   if (!con)
-//     return string + "ay";
+}
 
-//   return string.substring(con[1].length) + con[1] + "ay"
-// }
+console.log(reverseString("alin31ed"));
 
-// console.log(consonant('banana'));
+function consonant(string) {
+  let con = string.match(/^([^aeiou]+)[aeiou]/i);
+  if (!con)
+    return string + "ay";
+
+  return string.substring(con[1].length) + con[1] + "ay"
+}
+
+const yayAnswer = () => {
+  const yayInput = document.getElementById("yay-input").value;
+  const yayAnswer = document.getElementById("yay-answer");
+  const anser = consonant(yayInput)
+  yayAnswer.innerHTML = "your output is :" + anser
+}
 
 
-// const getIp = async () => {
-//     const response = await fetch("https://api.ipify.org?format=json");
-//     const data = await response.json()
-//    return data.ip
-// }
+const getIp = async () => {
+    const response = await fetch("https://api.ipify.org?format=json");
+    const data = await response.json()
+   return data.ip
+}
 
-// fetch("https://api.ipify.org?format=json")
-// .then((response) => response.json())
-// .then((data) =>{
-//     let sum = 0
-//     const ip = data.ip
-//     const ip_array = ip.split(".")
-//     console.log(ip_array);
-//     for (let element of ip_array){
-//         if(parseInt(element) % 2 === 0 ) {
-//            sum = sum + parseInt(element) 
-//         }
-//     }
-//     console.log(sum);
-// }
+fetch("https://api.ipify.org?format=json")
+.then((response) => response.json())
+.then((data) =>{
+    let sum = 0
+    const ip = data.ip
+    const ip_array = ip.split(".")
+    console.log(ip_array);
+    for (let element of ip_array){
+        if(parseInt(element) % 2 === 0 ) {
+           sum = sum + parseInt(element) 
+        }
+    }
+    console.log(sum);
+}
      
-// );
+);
 
-// function getLocation() {
-//     if (navigator.geolocation) {
-//       navigator.geolocation.getCurrentPosition(showPosition);
-//     } else { 
-//       x.innerHTML = "Geolocation is not supported by this browser.";
-//     }
-//   }
+function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+      x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+  }
   
-//   function showPosition(position) {
-//         console.log(position);
-//   }
-// getLocation()
+  function showPosition(position) {
+    const myLocation = document.getElementById("location");
+    const loc = document.createElement("h3");
+    loc.innerHTML = `
+    my longitude is : ${position.coords.longitude} <br>
+    my latitude is : ${position.coords.latitude} <br>
+    
+    `
+    loc.className = "location"
+    myLocation.appendChild(loc)
+  }
+  getLocation()
+
+  const boost = document.getElementsByClassName("boost")[0].addEventListener("click", () => {
+    window.location.href = "#head"
+  })
+
 

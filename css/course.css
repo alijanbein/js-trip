@@ -4,6 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: sans-serif;
 }
 #head {
     width: 100%;
@@ -97,3 +98,21 @@ body {
     transition: height 0.1s;
 }
 
+.location {
+    color: #fff;
+}
+
+.boost {
+    width: 7rem;
+    height :4rem;
+    color :#fff;
+    background: #000;
+    border: 10px;
+    border: 1px solid #fff;
+
+}
+
+.boost:hover {
+    color :#000;
+    background: #fff;
+}

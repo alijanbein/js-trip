@@ -19,7 +19,6 @@ class Form {
 }
 
 const submitHandler = (event) => {
-    window.location.href = "./course.html";
     const fname = document.getElementById("fname").value
     const lname = document.getElementById("lname").value
     const phone = document.getElementById("phone").value
@@ -41,6 +40,7 @@ const submitHandler = (event) => {
         gm.classList.add("error")
     }
     if (passwordIsValid && emailIsValid) {
+        window.location.href = "./course.html";
         pas.classList.remove("error")
         gm.classList.remove("error")
         
